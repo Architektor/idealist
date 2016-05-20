@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Router from './routes.js';
 import { combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -12,9 +13,9 @@ const store = createStore(reducer);
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className={'wrapper'}>
         <Provider store={store}>
-          <div>ksdas</div>
+          <Router />
         </Provider>
 
         {renderDevTools(store)}
