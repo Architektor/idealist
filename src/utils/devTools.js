@@ -2,7 +2,6 @@ import React from 'react';
 import { createStore as initialCreateStore, compose } from 'redux';
 
 export let createStore = initialCreateStore;
-
 if (__DEV__) {
   createStore = compose(
     require('redux-devtools').devTools(),
