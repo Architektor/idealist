@@ -18,12 +18,8 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.jsx$/,
-      exclude: /(node_moduels)/,
+      test: /\.js?/,
       loaders: ['react-hot', 'babel'],
-      query: {
-			  presets: ['es2015', 'react']
-      },
       include: path.join(__dirname, 'src')
     }]
   }
